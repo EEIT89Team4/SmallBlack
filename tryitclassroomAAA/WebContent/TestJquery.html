@@ -1,0 +1,240 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>jQuery UI Accordion - Default functionality</title>
+  
+  
+<!--   <link rel="stylesheet" href="css/jquery-ui.css"> -->
+<!--   <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"> -->
+<!--   <link rel="stylesheet" href="css/datatables.min.css" /> -->
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+<!-- <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/u/bs/jq-2.2.3,dt-1.10.12/datatables.min.css" /> -->
+
+
+  <!--上面是新的，下面是原本的  -->
+  <link rel="stylesheet" href="css/font-awesome.min.css">
+<!--  	<link rel="stylesheet" href="css/bootstrap.min.css" /> -->
+	<script src="js/jquery-1.12.3.min.js"></script>
+<!--   <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script> -->
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/datatables.min.js"></script>
+
+<!-- 	<script type="text/javascript" src="https://cdn.datatables.net/u/bs/jq-2.2.3,dt-1.10.12/datatables.min.js"></script> -->
+
+
+
+  <script>
+  
+//   $(function() {
+// 	    $( "#accordion1" ).accordion({
+// 	      collapsible: true
+// 	    });
+// 	  } );
+  
+  $(function () {
+      $('#table1').DataTable({
+         "ajax": "ProductAll",
+         "columns": [
+             { "data": "product_no" },
+             { "data": "product_name" },
+             { "data": "product_quantity" }
+         ]
+      });
+  });
+  
+  
+  
+  </script>
+ 	
+		
+
+		
+  <style>
+  
+  .button {
+   border-top: 1px solid #8ab4cc;
+   background: #0e344d;
+   background: -webkit-gradient(linear, left top, left bottom, from(#2384c4), to(#0e344d));
+   background: -webkit-linear-gradient(top, #2384c4, #0e344d);
+   background: -moz-linear-gradient(top, #2384c4, #0e344d);
+   background: -ms-linear-gradient(top, #2384c4, #0e344d);
+   background: -o-linear-gradient(top, #2384c4, #0e344d);
+/*    padding: 16px 32px; */
+   -webkit-border-radius: 12px;
+   -moz-border-radius: 12px;
+   border-radius: 12px;
+   -webkit-box-shadow: rgba(0,0,0,1) 0 1px 0;
+   -moz-box-shadow: rgba(0,0,0,1) 0 1px 0;
+   box-shadow: rgba(0,0,0,1) 0 1px 0;
+   text-shadow: rgba(0,0,0,.4) 0 1px 0;
+   color: #ffffff;
+   font-size: 21px;
+   font-family: Helvetica, Arial, Sans-Serif;
+   text-decoration: none;
+   vertical-align: middle;
+   width: 260px; 
+   height: 50px; 
+   }
+.button:hover {
+   border-top-color: #023352;
+   background: #023352;
+   color: #ffffff;
+   }
+.button:active {
+   border-top-color: #13374f;
+   background: #13374f;
+   }
+  
+  
+ .jianli_apply{ 
+ 	display: block;  
+ 	width: 260px; 
+	height: 50px; 
+ 	border: 1px solid #CCC; 
+/*  	background: #9c9d9e;  */
+ 	background:-webkit-linear-gradient(top left,#000000,#AAAAAA); 
+ /*  margin-top: 20px;  */ 
+ 	line-height:50px; 
+ 	text-align:center;
+ 	border-top-right-radius:20px;
+ 	border-bottom-right-radius:20px;
+ } 
+ 
+ .jianli_apply a{  
+ 	font-size: 20px; 
+  	color:white; 
+  	}  
+  	
+ .fortitle{ 
+ 	display: block;  
+  	width: 260px;  
+	height: 60px;  
+ 	border: 1px solid #CCC; 
+/*  	background: #00FF00;  */
+ 	background:-webkit-linear-gradient(top left,#00DDDD,#FFFFFF); 
+ /*  margin-top: 20px;  */ 
+ 	line-height:80px; 
+ 	text-align:center;
+/*  	border-radius:20px;  */
+ 	border-top-right-radius:20px;
+ 	border-bottom-right-radius:20px;
+ } 
+  .fortitle a{ 
+	font-size: 20px; 
+  	color:black; 
+ } 
+  .pokehead{ 
+ 	display: block;  
+ 	height: 80px; 
+ 	border: 1px solid #CCC; 
+ 	/* 	background: #00FFFF; */ 
+ 	background:-webkit-linear-gradient(top left,#0000AA,#CCCCFF); 
+ 	color:white; 
+ 	/* margin-top: 20px; */ 
+ } 
+ 
+  </style>
+  
+  
+<!--   <div class="panel panel-default"> -->
+<!-- 			<div class="panel-heading" role="tab" id="headingOne"> -->
+<!-- 				<h4 class="panel-title"> -->
+<!-- 					<a data-toggle="collapse" data-parent="#accordion" -->
+<!-- 						href="#collapseOne" aria-expanded="true" -->
+<!-- 						aria-controls="collapseOne"> Collapsible Group Item #1 </a> -->
+<!-- 				</h4> -->
+<!-- 			</div> -->
+<!-- 			<div id="collapseOne" class="panel-collapse collapse in" -->
+<!-- 				role="tabpanel" aria-labelledby="headingOne"> -->
+<!-- 				<div class="panel-body">aaa</div> -->
+<!-- 				<div class="panel-body">aaa</div> -->
+<!-- 			</div> -->
+<!-- 		</div> -->
+		
+  
+</head>
+<body>
+<div class="pokehead">	
+		<h1><font face="Arial Black">PokeSong後台系統</font></h1>
+	</div>
+<div class="col-md-2">
+<div id="accordion" style="width:300px" class="panel panel-default">
+	<div class="fortitle" role="tab" id="headingOne">
+  		<h4>
+  			<a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true"
+			 aria-controls="collapseOne"><i class="fa fa-book fa-2x fa-fw" aria-hidden="true"></i>廠商相關</a></h4> 
+	</div>
+	<div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+<!-- 	    <div><a href="Supplier_DataTables.html">查詢廠商</a></div> -->
+<!-- 		<div><a href="addSupplier.jsp">新增廠商</a></div> -->
+<!-- 		<div><a href="listAllSupplier.jsp">修改刪除廠商資料</a></div> -->
+		<div><input type="button" value="查詢廠商" name="btn1" class="button" onclick="location.href='Supplier_DataTables.html'"/></div>
+		<div><input type="button" value="新增廠商" name="btn1" class="button" onclick="location.href='addSupplier.jsp'"/></div>
+		<div><input type="button" value="修改刪除廠商資料" name="btn1" class="button" onclick="location.href='listAllSupplier.jsp'"/></div>
+  	</div>
+	<div class="fortitle" role="tab" id="headingTwo">
+  		<h4>
+  			<a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="true"
+			 aria-controls="collapseTwo"><i class="fa fa-camera-retro fa-2x fa-fw" aria-hidden="true"></i>產品相關</a></h4> 
+	</div>
+  <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+<!--    	<div class="jianli_apply"><a href="Product_DataTables.html">查詢產品剩餘數量</a></div> -->
+<!-- 		<div class="jianli_apply"><a href="UploadFile.html">產品進貨(From Excel)</a></div> -->
+<!-- 		<div class="jianli_apply"><a href="listAllProduct.jsp">修改產品資料</a></div> -->
+<!-- 		<div class="jianli_apply"><a href="addProduct.jsp">新增產品</a></div> -->
+		<div><input type="button" value="查詢產品剩餘數量" name="btn1" class="button" onclick="location.href='Product_DataTables.html'"/></div>
+		<div><input type="button" value="產品進貨(From Excel)" name="btn1" class="button" onclick="location.href='UploadFile.html'"/></div>
+		<div><input type="button" value="修改產品資料" name="btn1" class="button" onclick="location.href='listAllProduct.jsp'"/></div>
+		<div><input type="button" value="新增產品" name="btn1" class="button" onclick="location.href='addProduct.jsp'"/></div>
+  </div>
+  <div class="fortitle" role="tab" id="headingThree">
+  		<h4>
+  			<a data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="true"
+			 aria-controls="collapseThree"><i class="fa fa-pencil fa-2x fa-fw" aria-hidden="true"></i>分類相關</a></h4> 
+  </div>
+  <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+<!--   		<div class="jianli_apply"><a href="addProductClass.jsp">新增產品分類</a></div> -->
+<!--   		<div class="jianli_apply"> <a href="listAllProductClass.jsp">修改產品分類</a></div> -->
+<!-- 		<div class="jianli_apply"><a href="addProductClassDetails.jsp">新增產品細部分類</a></div> -->
+<!-- 		<div class="jianli_apply"><a href="listAllProductClassDetails.jsp">修改產品細部分類</a></div> -->
+ 		<div><input type="button" value="新增產品分類" name="btn1" class="button" onclick="location.href='addProductClass.jsp'"/></div>
+		<div><input type="button" value="修改產品分類" name="btn1" class="button" onclick="location.href='listAllProductClass.jsp'"/></div>
+		<div><input type="button" value="新增產品細部分類" name="btn1" class="button" onclick="location.href='addProductClassDetails.jsp'"/></div>
+		<div><input type="button" value="修改產品細部分類" name="btn1" class="button" onclick="location.href='listAllProductClassDetails.jsp'"/></div>
+  </div>
+  <div class="fortitle" role="tab" id="headingFour">
+  		<h4>
+  			<a data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="true"
+			 aria-controls="collapseFour"><i class="fa fa-user fa-2x fa-fw"></i>會員相關</a></h4> 
+  </div>
+  <div id="collapseFour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFour">
+  <p>待更新啦幹</p>
+  </div>
+</div>
+</div>
+ 
+<div class="col-md-10">
+
+	<div class="jumbotron" style="padding:10px 20px;">
+			<div class="page-header" style="margin-top:5px;padding:10px 20px;">
+				<h3>產品列表</h3>
+					</div>
+						<table id="table1"
+							class="table table-bordered table-striped table-hover">
+						<thead>
+							<tr>
+								<th style="color:blue">產品編號</th>
+								<th style="color:blue">產品名稱</th>
+								<th style="color:blue">剩餘數量</th>
+							</tr>
+						</thead>
+						<tbody>
+					</tbody>
+					</table>
+				</div>
+</div>
+</body>
+</html>

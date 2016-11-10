@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Insert title here</title>
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css"
+	href="https://cdn.datatables.net/u/bs/jq-2.2.3,dt-1.10.12/datatables.min.css" />
+
+</head>
+<body>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-9">
+				<div class="jumbotron">
+					<div class="page-header">
+						<h3>產品列表</h3>
+					</div>
+					<!-- 每頁不同的內容從這裡開始 -->
+
+					<table id="table1"
+						class="table table-bordered table-striped table-hover">
+						<thead>
+							<tr>
+								<th>產品編號</th>
+								<th>產品名稱</th>
+								<th>剩餘數量</th>
+							</tr>
+						</thead>
+						<tbody>
+
+						</tbody>
+					</table>
+					<!-- 每頁不同的內容到這裡結束 -->
+				</div>
+			</div>
+		</div>
+
+	</div>
+	<!-- /container -->
+
+
+	<script src="js/jquery-1.12.3.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+
+	<script type="text/javascript"
+		src="https://cdn.datatables.net/u/bs/jq-2.2.3,dt-1.10.12/datatables.min.js"></script>
+	<script>
+		JQ = $.noConflict();
+		JQ(function () {
+			JQ('#table1').DataTable({
+               "ajax": "ProductAll",
+               "columns": [
+                   { "data": "product_no" },
+                   { "data": "product_name" },
+                   { "data": "product_quantity" }
+               ]
+            });
+            
+            //<td><a href='#' class='btn btn-danger'>刪除</a></td>
+
+//             $.getJSON('ProductsAll', {  }, function (data) {
+              
+//                 $('#table1>tbody').empty();
+//                 $.each(data.data, function (i, product) {
+//                     //console.log(product.ProductName);
+//                     var cell1 = $("<td></td>").text(product.ProductID);
+//                     var cell2 = $("<td></td>").text(product.ProductName);
+//                     var cell3 = $("<td></td>").text(product.UnitPrice);
+//                     var cell4 = $("<td></td>").text(product.UnitsInStock);
+                  
+
+//                     var row = $('<tr></tr>').append([cell1, cell2, cell3, cell4]);
+
+//                     $('#table1>tbody').append(row);
+//                 });
+
+            
+//             })
+        });
+
+    </script>
+</body>
+
+</html>

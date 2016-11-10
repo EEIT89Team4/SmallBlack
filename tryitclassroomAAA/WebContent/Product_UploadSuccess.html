@@ -1,0 +1,238 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>jQuery UI Accordion - Default functionality</title>
+ 
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/font-awesome.min.css">
+	<script src="js/jquery-1.12.3.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/datatables.min.js"></script>
+
+  <script>
+  alert("新增成功");
+  $(function () {
+      $('#table1').DataTable({
+         "ajax": "ProductAll",
+         "columns": [
+             { "data": "product_no" },
+             { "data": "product_name" },
+             { "data": "product_quantity" }
+         ]
+      });
+ 
+  		$('#btn2').click(function() {
+  			var t1=$('#fort1');
+			t1.empty();
+			$('#show').load('addSupplier.jsp')
+		});
+  		
+  		$('#btn3').click(function() {
+  			var t1=$('#fort1');
+			t1.empty();
+			$('#show').load('listAllSupplier.jsp')
+		});
+  		
+  		$('#btn6').click(function() {
+  			var t1=$('#fort1');
+			t1.empty();
+			$('#show').load('listAllProduct.jsp')
+		});
+  		
+  		$('#btn7').click(function() {
+  			var t1=$('#fort1');
+			t1.empty();
+			$('#show').load('addProduct.jsp')
+		});
+  	
+  		$('#btn8').click(function() {
+  			var t1=$('#fort1');
+			t1.empty();
+			$('#show').load('addProductClass.jsp')
+		});
+  		
+  		$('#btn9').click(function() {
+  			var t1=$('#fort1');
+			t1.empty();
+			$('#show').load('listAllProductClass.jsp')
+		});
+  		
+  		$('#btn10').click(function() {
+  			var t1=$('#fort1');
+			t1.empty();
+			$('#show').load('addProductClassDetails.jsp')
+		});
+  		
+  		$('#btn11').click(function() {
+  			var t1=$('#fort1');
+			t1.empty();
+			$('#show').load('listAllProductClassDetails.jsp')
+		});
+  });
+  
+ 
+  
+  
+  
+  </script>
+ 	
+		
+
+  <style>
+  
+  .button {
+   border-top: 1px solid #8ab4cc;
+   background: #0e344d;
+   background: -webkit-gradient(linear, left top, left bottom, from(#2384c4), to(#0e344d));
+   background: -webkit-linear-gradient(top, #2384c4, #0e344d);
+   background: -moz-linear-gradient(top, #2384c4, #0e344d);
+   background: -ms-linear-gradient(top, #2384c4, #0e344d);
+   background: -o-linear-gradient(top, #2384c4, #0e344d);
+   -webkit-border-radius: 12px;
+   -moz-border-radius: 12px;
+   border-radius: 12px;
+   -webkit-box-shadow: rgba(0,0,0,1) 0 1px 0;
+   -moz-box-shadow: rgba(0,0,0,1) 0 1px 0;
+   box-shadow: rgba(0,0,0,1) 0 1px 0;
+   text-shadow: rgba(0,0,0,.4) 0 1px 0;
+   color: #ffffff;
+   font-size: 21px;
+   font-family: Helvetica, Arial, Sans-Serif;
+   text-decoration: none;
+   vertical-align: middle;
+   width: 260px; 
+   height: 50px; 
+   }
+.button:hover {
+   border-top-color: #023352;
+   background: #023352;
+   color: #ffffff;
+   }
+.button:active {
+   border-top-color: #13374f;
+   background: #13374f;
+   }
+  
+  
+ .jianli_apply{ 
+ 	display: block;  
+ 	width: 260px; 
+	height: 50px; 
+ 	border: 1px solid #CCC; 
+ 	background:-webkit-linear-gradient(top left,#000000,#AAAAAA); 
+ 	line-height:50px; 
+ 	text-align:center;
+ 	border-top-right-radius:20px;
+ 	border-bottom-right-radius:20px;
+ } 
+ 
+ .jianli_apply a{  
+ 	font-size: 20px; 
+  	color:white; 
+  	}  
+  	
+ .fortitle{ 
+ 	display: block;  
+  	width: 260px;  
+	height: 60px;  
+ 	border: 1px solid #CCC; 
+ 	background:-webkit-linear-gradient(top left,#00DDDD,#FFFFFF); 
+ 	line-height:80px; 
+ 	text-align:center;
+ 	border-top-right-radius:20px;
+ 	border-bottom-right-radius:20px;
+ } 
+  .fortitle a{ 
+	font-size: 20px; 
+  	color:black; 
+ } 
+  .pokehead{ 
+ 	display: block;  
+ 	height: 80px; 
+ 	border: 1px solid #CCC; 
+ 	/* 	background: #00FFFF; */ 
+ 	background:-webkit-linear-gradient(top left,#0000AA,#CCCCFF); 
+ 	color:white; 
+ } 
+ 
+  </style>
+  
+		
+  
+</head>
+<body>
+<div class="pokehead">	
+		<h1><font face="Arial Black">PokeSong後台系統</font></h1>
+	</div>
+<div class="col-md-2">
+<div id="accordion" style="width:300px" class="panel panel-default">
+	<div class="fortitle" role="tab" id="headingOne">
+  		<h4>
+  			<a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true"
+			 aria-controls="collapseOne"><i class="fa fa-book fa-2x fa-fw" aria-hidden="true"></i>廠商相關</a></h4> 
+	</div>
+	<div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+		<div><input type="button" value="查詢廠商" name="btn1" class="button" onclick="location.href='Supplier_DataTables.html'"/></div>
+		<div><input type="button" value="新增廠商" name="btn2" id="btn2" class="button"/></div>
+		<div><input type="button" value="修改刪除廠商資料" name="btn3" id="btn3" class="button"/></div>
+  	</div>
+	<div class="fortitle" role="tab" id="headingTwo">
+  		<h4>
+  			<a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="true"
+			 aria-controls="collapseTwo"><i class="fa fa-camera-retro fa-2x fa-fw" aria-hidden="true"></i>產品相關</a></h4> 
+	</div>
+  <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+		<div><input type="button" value="查詢產品剩餘數量" name="btn4" class="button" onclick="location.href='Product_DataTables.html'"/></div>
+		<div><input type="button" value="產品進貨(From Excel)" name="btn5" class="button" onclick="location.href='UploadFile.html'"/></div>
+		<div><input type="button" value="修改產品資料" name="btn6" id="btn6" class="button"/></div>
+		<div><input type="button" value="新增產品" name="btn7" id="btn7" class="button"/></div>
+  </div>
+  <div class="fortitle" role="tab" id="headingThree">
+  		<h4>
+  			<a data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="true"
+			 aria-controls="collapseThree"><i class="fa fa-pencil fa-2x fa-fw" aria-hidden="true"></i>分類相關</a></h4> 
+  </div>
+  <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+ 		<div><input type="button" value="新增產品分類" name="btn8" id="btn8" class="button"/></div>
+		<div><input type="button" value="修改產品分類" name="btn9" id="btn9" class="button"/></div>
+		<div><input type="button" value="新增產品細部分類" name="btn10" id="btn10" class="button"/></div>
+		<div><input type="button" value="修改產品細部分類" name="btn11" id="btn11" class="button"/></div>
+  </div>
+  <div class="fortitle" role="tab" id="headingFour">
+  		<h4>
+  			<a data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="true"
+			 aria-controls="collapseFour"><i class="fa fa-user fa-2x fa-fw"></i>會員相關</a></h4> 
+  </div>
+  <div id="collapseFour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFour">
+  <div><input type="button" value="會員列表" name="btn12" id="btn12" class="button" onclick="location.href='Member_DataTables.html'"/></div>
+  </div>
+</div>
+</div>
+ 
+<div class="col-md-10">
+
+	<div class="jumbotron" style="padding:10px 20px;">
+			<div class="page-header" style="margin-top:5px;padding:10px 20px;" id="show">
+				<h3>產品列表</h3>
+					</div>
+					<div id="fort1">
+						<table id="table1"
+							class="table table-bordered table-striped table-hover">
+						<thead>
+							<tr>
+								<th style="color:blue">產品編號</th>
+								<th style="color:blue">產品名稱</th>
+								<th style="color:blue">剩餘數量</th>
+							</tr>
+						</thead>
+						<tbody>
+					</tbody>
+					</table>
+					</div>
+				</div>
+</div>
+</body>
+</html>
