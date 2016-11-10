@@ -80,7 +80,7 @@ html,body{ width:100%; height:100%; margin: auto; padding:0; text-align:center; 
 .box8{
 	background-size:cover,cover,45px 32px,50px 30px,40px 50px;
 	background-image:-moz-radial-gradient(40% 40%,circle,rgba(0,0,0,.1) 40%,rgba(0,0,0,1) 100%),-moz-linear-gradient(-90deg, rgba(153,153,153,0) 45%, #F30 45%,#F50 50%, #F30 55%, rgba(153,153,153,0) 55%),-moz-radial-gradient(10px 10px,circle,rgba(70,70,70,1) 6px,rgba(70,70,70,0) 6px),-moz-radial-gradient(25px 25px,circle,rgba(70,70,70,1) 5px,rgba(70,70,70,0) 5px),-moz-radial-gradient(8px 40px,circle,rgba(70,70,70,1) 4px,rgba(70,70,70,0) 4px);
-	background-image:-webkit-radial-gradient(40% 40%,circle,rgba(0,0,0,.1) 40%,rgba(0,0,0,1) 100%),-webkit-linear-gradient(-90deg, rgba(153,153,153,0) 45%, #F30 45%,#F50 50%, #F30 55%, rgba(153,153,153,0) 55%),-webkit-radial-gradient(10px 10px,circle,rgba(70,70,70,1) 6px,rgba(70,70,70,0) 6px),-webkit-radial-gradient(25px 25px,circle,rgba(70,70,70,1) 5px,rgba(70,70,70,0) 5px),-webkit-radial-gradient(8px 40px,circle,rgba(70,70,70,1) 4px,rgba(70,70,70,0) 4px);
+	background-image:-webkit-radial-gradient(40% 40%,circle,rgba(0,0,0,.1) 40%,rgba(0,0,0,1) 100%),-webkit-linear-gradient(-90deg, rgba(153,153,153,0) 45%, #F30 45%,#F50 50%, #F30 55%, rgba(153,153,153,0) 55%),-webkit-radial-gradient(8px 40px,circle,rgba(70,70,70,1) 4px,rgba(70,70,70,0) 4px);
 }
 .box3:before{
 	content: "";
