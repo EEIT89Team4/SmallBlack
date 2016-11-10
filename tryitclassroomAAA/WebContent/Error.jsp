@@ -7,7 +7,7 @@
     <title>Error Upload</title>
 </head>
 <body>
-   <h1>新增失敗</h1>
+   <h1>新增失敗  Git修改第一次</h1>
    <h1>請確認輸入的資料格式無誤</h1>
    <input type="button" value="返回廠商列表" id="suc" onclick="location.href='Supplier_DataTables.html'">
 </body>
