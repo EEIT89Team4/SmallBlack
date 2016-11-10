@@ -18,7 +18,7 @@
     <table border='1' bordercolor='#CCCCFF' width='600' align="center">
 			<tr>
 				<th style="text-align:center">廠商名稱</th>
-				<th style="text-align:center">負責人</th>			
+				<th style="text-align:center">負責人1</th>			
 			</tr>
 			<tr align='center'>
 				<td><%=request.getParameter("suppliername1")%></td>
